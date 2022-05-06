@@ -1,7 +1,0 @@
-.project
-.pydevproject
-.settings
-__pycache__
-
-syntax: glob
-*.pyc

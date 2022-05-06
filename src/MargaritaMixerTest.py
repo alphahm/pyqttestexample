@@ -1,6 +1,3 @@
-# vim: set fileencoding=utf-8 :
-# $Header:  $
-#
 # Copyright 2011 Voom, Inc.
 #
 # This file is part of the Voom PyQt QTest Example.
@@ -22,11 +19,6 @@
 """
 Test the margarita mixer GUI.
 """
-
-__author__ = "John McGehee, http://johnnado.com/"
-__version__ = "$Revision: 1.1 $"
-__date__ = "$Date: 2015/07/30 $"
-__copyright__ = "Copyright 2011 Voom, Inc."
 
 import sys
 import unittest

@@ -1,10 +1,4 @@
-# vim: set fileencoding=utf-8 :
-# $Header:  $
-#
 # Copyright 2011 Voom, Inc.
-#
-# This file is part of the Voom PyQt QTest Example.
-# See http://www.voom.net/pyqt-qtest-example/ for documentation.
 #
 # PyQt QTest Example is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
