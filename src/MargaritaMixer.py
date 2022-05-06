@@ -19,11 +19,6 @@ Extract Ui_MargaritaMixer.py using:
    pyuic4 --output Ui_MargaritaMixer.py MargaritaMixer.ui
 """
 
-__author__ = "John McGehee, http://johnnado.com/"
-__version__ = "$Revision: 1.1 $"
-__date__ = "$Date: 2015/07/30 $"
-__copyright__ = "Copyright 2011 Voom, Inc."
-
 import sys
 from PyQt4 import QtGui, QtCore
 
