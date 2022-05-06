@@ -20,11 +20,11 @@ Extract Ui_MargaritaMixer.py using:
 """
 
 import sys
-from PyQt4 import QtGui, QtCore
+from PyQt5.QtWidgets import QWidget, QApplication
 
 from Ui_MargaritaMixer import Ui_MargaritaMixer
 
-class MargaritaMixer(QtGui.QWidget):
+class MargaritaMixer(QWidget):
   
     def __init__(self):
         super(MargaritaMixer, self).__init__()
@@ -68,7 +68,7 @@ class MargaritaMixer(QtGui.QWidget):
 
 
 if __name__ == "__main__":
-    app = QtGui.QApplication(sys.argv)
+    app = QApplication(sys.argv)
     myapp = MargaritaMixer()
     myapp.show()
     sys.exit(app.exec_())
