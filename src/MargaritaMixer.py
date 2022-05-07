@@ -13,41 +13,35 @@
 # You should have received a copy of the GNU General Public License
 # along with PyQt QTest Example.  If not, see <http://www.gnu.org/licenses/>.
 
-"""
-GUI for a margarita mixing machine.
-Extract Ui_MargaritaMixer.py using:
-   pyuic4 --output Ui_MargaritaMixer.py MargaritaMixer.ui
-"""
-
 import sys
 from PyQt5.QtWidgets import QWidget, QApplication
 
 from Ui_MargaritaMixer import Ui_MargaritaMixer
 
+
 class MargaritaMixer(QWidget):
-  
     def __init__(self):
         super(MargaritaMixer, self).__init__()
-        
+
         self.ui = Ui_MargaritaMixer()
         self.ui.setupUi(self)
-        
+
     @property
     def jiggers(self):
-        '''Return the total volume of the margaritas in units of jiggers.
+        """Return the total volume of the margaritas in units of jiggers.
         One jigger is 0.0444 liters.
-        '''
+        """
         jiggersTequila = self.ui.tequilaScrollBar.value()
         jiggersTripleSec = self.ui.tripleSecSpinBox.value()
         jiggersLimeJuice = float(self.ui.limeJuiceLineEdit.text())
         jiggersIce = self.ui.iceHorizontalSlider.value()
         return jiggersTequila + jiggersTripleSec + jiggersLimeJuice + jiggersIce
-    
+
     @property
     def liters(self):
-        '''Return the total volume of the margaritas in liters.'''
+        """Return the total volume of the margaritas in liters."""
         return 0.0444 * self.jiggers
-        
+
     @property
     def speedName(self):
         speedButton = self.ui.speedButtonGroup.checkedButton()
@@ -56,14 +50,13 @@ class MargaritaMixer(QWidget):
         return speedButton.text()
 
     def accept(self):
-        '''Execute the command in response to the OK button.'''
-        print('The volume of drinks is {0} liters ({1} jiggers).'
-              ''.format(self.liters, self.jiggers))
-        print('The blender is running at speed "{0}"'.format(self.speedName))
+        """Execute the command in response to the OK button."""
+        print(f"The volume of drinks is {self.liters} liters ({self.jiggers} jiggers).")
+        print(f'The blender is running at speed "{self.speedName}"')
         self.close()
 
     def reject(self):
-        '''Cancel.'''
+        """Cancel."""
         self.close()
 
 
